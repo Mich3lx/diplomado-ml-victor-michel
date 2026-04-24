@@ -38,14 +38,7 @@
 ```
 
 ---
-
-## PARTE 1 — El Instructor Sube el Material de la Sesión 5
-
-> **Quién:** Eric  
-> **Cuándo:** Antes de la sesión (idealmente la noche anterior)  
-> **Dónde:** Carpeta `diplomado-ml-seguros`
-
-### Paso a paso
+## Estrutura general
 
 ```
 📁 ESTRUCTURA QUE DEBES TENER ANTES DE SUBIR
@@ -88,17 +81,24 @@ cd "C:\Users\Eric_Daniel\Documents\Ciencias Cursos\Diplomado\diplomado-ml-seguro
 
 Dependiendo de que la carpeta será lo que tengamos que hacer:
 
-### Carpeta del curso:
+## PARTE 1 — Carpeta del curso
 
-**0. Solo el instructor**
+
+### Instructor o propetario:
+
+> **Quién:** Eric/Eduardo/Karla
+> **Cuándo:** Antes de la sesión (idealmente la noche anterior)  
+> **Dónde:** Carpeta `diplomado-ml-seguros`
+
+
+**1. Se validan los cambios**
 
 ```bash
 git status
 # Debe mostrar los archivos nuevos de la sesión 5 en rojo
 ```
 
-**3. Agrega, confirma y sube:**
-
+**2. Se actualiza en la nube**
 ```bash
 git add .
 
@@ -120,15 +120,14 @@ Debes ver la carpeta modulo1/sesion5 con los archivos nuevos
 
 ---
 
-## PARTE 2 — El Alumno Descarga el Material de la Sesión 5
+### Alumno:
 
 > **Quién:** Cada alumno  
 > **Cuándo:** Antes de clase o al inicio de la sesión  
 > **Dónde:** Carpeta `diplomado-ml-seguros` (repo del instructor)
 
-### Paso a paso
 
-**1. Abre Anaconda Prompt y navega al repo del instructor:**
+**1. Ve a la carpeta que descragaste del instructor la que se tuvo que generar al hacer el clone**
 
 ```bash
 cd "C:\Users\TuNombre\Documents\diplomado-ml-seguros"
@@ -166,7 +165,7 @@ Si editaste algo por accidente, ejecuta: git restore .
 
 ---
 
-## PARTE 3 — El Alumno Sube su Ejercicio de la Sesión 5
+## PARTE 2 - Carpeta del alumno (Para subir tareas)
 
 > **Quién:** Cada alumno  
 > **Cuándo:** Durante o después de clase  
