@@ -380,4 +380,87 @@ INSTRUCTOR (Eric)                    ALUMNOS
 
 ---
 
-*Diplomado ML en Seguros · Facultad de Ciencias, UNAM · 2026*
+# 🔍 Git — Diagnosticos y Comandos de Referencia
+
+---
+
+## Antes de cualquier push o pull — verificar carpeta
+
+```bash
+# ¿En que carpeta estoy parado?
+pwd          # Mac / Linux
+cd           # Windows (sin argumentos)
+
+# ¿A que repositorio apunta esta carpeta?
+git remote -v
+```
+
+### Lo que debes ver segun la accion
+
+| Accion | remote -v debe mostrar |
+|--------|------------------------|
+| `git pull` (bajar material) | `github.com/eric/diplomado-ml-seguros` |
+| `git push` (subir tarea) | `github.com/TuUsuario/diplomado-ml-TuNombre` |
+
+> ⚠️ Si ves el repo equivocado: `cd ../nombre-carpeta-correcta` y ya.
+
+---
+
+## Cambiar a donde apunta el remoto
+
+```bash
+# Ver la URL actual
+git remote -v
+
+# Cambiar la URL (si apunta al repo equivocado)
+git remote set-url origin https://github.com/TuUsuario/diplomado-ml-TuNombre.git
+
+# Verificar que quedo bien
+git remote -v
+```
+
+---
+
+## Otros comandos utiles
+
+```bash
+# Ver en que rama estas
+git branch
+# debe decir: * main
+
+# Ver historial de commits (resumido)
+git log --oneline -5
+
+# Ver exactamente que cambio en los archivos
+git diff
+
+# Deshacer cambios que aun NO tienen commit
+git restore nombre_archivo.ipynb
+git restore .          # deshacer TODO
+
+# Ver quien hizo cada cambio (util para instructor)
+git log --oneline --author="NombreAlumno"
+
+# Bajar cambios sin fusionar (ver antes de aplicar)
+git fetch
+git status             # muestra si hay cambios pendientes
+```
+
+---
+
+## Los dos errores mas comunes y su solucion
+
+```
+PROBLEMA: hice pull pero no bajo el material nuevo
+CAUSA:    estaba en mi propio repo, no en el del instructor
+SOLUCION: cd ../diplomado-ml-seguros  →  git pull
+
+PROBLEMA: git push me da "Permission denied"
+CAUSA:    estaba en el repo del instructor (solo lectura)
+SOLUCION: cd ../diplomado-ml-TuNombre  →  git push
+```
+
+---
+
+*Diplomado ML en Seguros · FC UNAM · 2026*
+
